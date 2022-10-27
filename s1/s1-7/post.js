@@ -1,0 +1,7 @@
+exports.createPost = () => {
+    ///....
+}
+
+exports.commentOnPost = () => {
+    ///....
+}
