@@ -1,15 +1,25 @@
 {
-  "name": "firtapp",
+  "name": "nodejs-aptech",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanhHung123/NodeJS-Aptech.git"
+  },
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanhHung123/NodeJS-Aptech/issues"
+  },
+  "homepage": "https://github.com/DanhHung123/NodeJS-Aptech#readme",
   "dependencies": {
-    "colors": "^1.4.0",
+    "colors": "^1.4.0"
+  },
+  "devDependencies": {
     "mime": "^3.0.0"
   }
 }
