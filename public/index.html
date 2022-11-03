@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <button id="getButton" onclick="get()">GET</button>
+    <button id="getButton2" onclick="post()">POST</button>
+    <button id="getButton3" onclick="del()">DELETE</button>
+
+    <script>
+        function get() {
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:8080/ajaxcall",
+                dataType: "json",
+            })
+            .done((data) => {
+                console.log('GET response: ', JSON.stringify(data,"",2));
+                $('#getButton').html(JSON.stringify(data,"",2));
+
+            })
+            .fail((jqXHR, testStatus, err) => {
+                console.log("Ajax error response: ", testStatus);
+            });
+        }
+        function post() {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:8080/ajaxcall",
+                dataType: "json",
+            })
+            .done((data) => {
+                console.log('GET response: ', JSON.stringify(data,"",2));
+                $('#getButton2').html(JSON.stringify(data,"",2));
+
+            })
+            .fail((jqXHR, testStatus, err) => {
+                console.log("Ajax error response: ", testStatus);
+            });
+        }
+        function del() {
+            $.ajax({
+                type: "DELETE",
+                url: "http://localhost:8080/ajaxcall",
+                dataType: "json",
+            })
+            .done((data) => {
+                console.log('GET response: ', JSON.stringify(data,"",2));
+                $('#getButton3').html(JSON.stringify(data,"",2));
+
+            })
+            .fail((jqXHR, testStatus, err) => {
+                console.log("Ajax error response: ", testStatus);
+            });
+        }
+    </script>
+</body>
+</html>
